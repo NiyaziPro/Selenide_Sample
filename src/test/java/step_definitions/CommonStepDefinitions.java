@@ -14,23 +14,29 @@ public class CommonStepDefinitions {
     }
 
     @And("{int} saniye bekler")
-    public void saniyeBekler(int arg0) {
+    public void saniyeBekler(int sec) {
+        // selenide default wait is 4 sec
+        sleep(sec * 1000);
     }
 
     @Then("onceki sayfaya gider")
     public void oncekiSayfayaGider() {
+        back();
     }
 
     @Then("sonraki sayfaya gider")
     public void sonrakiSayfayaGider() {
+        forward();
     }
 
     @Then("sayfayi yeniler")
     public void sayfayiYeniler() {
+        refresh();
     }
 
     @Then("sayfayi acik tutar")
     public void sayfayiAcikTutar() {
+
     }
 
 }
