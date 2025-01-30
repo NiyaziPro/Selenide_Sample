@@ -1,5 +1,6 @@
 package step_definitions;
 
+import com.codeborne.selenide.Configuration;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -36,6 +37,7 @@ public class CommonStepDefinitions {
 
     @Then("sayfayi acik tutar")
     public void sayfayiAcikTutar() {
+        Configuration.holdBrowserOpen= true;
 
     }
 
